@@ -31,15 +31,19 @@ paddle.fluid.layers.data(
 ```  
 
 ### 功能差异
-#### 输入shape的差异
+#### 输入shape
 Caffe：输入的shape中每一个维度的大小都需要详细定义。  
-PaddlePaddle：可以根据设置设置`append_batch_size`来确定是否将数据第一个维度的大小加入到shape中，若该参数为True，输入数据第一个维度的大小则由传入数据决定，若该参数为False，则shape的第一个维度为输入数据第一个维度的大小。   
+PaddlePaddle：可以通过设置`append_batch_size`来确定是否固定batch size的大小，若该参数为True，输入数据第的batch size为-1且由传入数据决定，若该参数为False，则batch size的大小为shape第一个维度的大小。   
 
 
+
+#### 数据类型
+Caffe：不需要强制定义输入数据的类型。  
+PaddlePaddle：需要强制定义输入数据的类型。
 
 #### 其他差异
-Caffe：不需要强制定义输入数据的类型。  
-PaddlePaddle：需要强制定义输入数据的类型，同时可以通过设置`lod_level`表示输入的数据是不是一个序列，设置`stop_gradient`表示是否应该停止计算梯度。
+Caffe：无`lod_level`和`stop_gradient`参数。
+PaddlePaddle：可以通过设置`lod_level`表示输入的数据是不是一个序列，设置`stop_gradient`表示是否应该停止计算梯度。
 
 
 ### 代码示例
