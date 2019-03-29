@@ -42,7 +42,7 @@ Caffe：不需要强制定义输入数据的类型。
 PaddlePaddle：需要强制定义输入数据的类型。
 
 #### 其他差异
-Caffe：无`lod_level`和`stop_gradient`参数。
+Caffe：无`lod_level`和`stop_gradient`参数。     
 PaddlePaddle：可以通过设置`lod_level`表示输入的数据是不是一个序列，设置`stop_gradient`表示是否应该停止计算梯度。
 
 
