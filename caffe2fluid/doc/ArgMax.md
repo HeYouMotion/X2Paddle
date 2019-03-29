@@ -27,5 +27,5 @@ paddle.fluid.layers.argmax(
 
 ### 功能差异
 #### 计算机制
-Caffe：可以通过设置设置`top_k`使输出为前k大的索引，同时可以设置`out_max_val`为true来使输出为前k大的数值。                                    
+Caffe：可以通过设置`top_k`使输出为前k大的索引，同时可以设置`out_max_val`为true来使输出为前k大的数值。                                    
 PaddlePaddle：只能输出最大值的索引。
