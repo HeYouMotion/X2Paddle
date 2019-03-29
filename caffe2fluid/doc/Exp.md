@@ -30,8 +30,8 @@ paddle.fluid.layers.exp(
 Caffe：有三个关于计算的参数，其计算公式为：  
 $$
 y=\begin{cases}
-e^\(shift+scale \times x\),\quad x\leq 0 \\\\
-base^\(shift+scale \times x\),\quad x>0
+e^{(shift+scale \times x)},\quad x\leq 0 \\\\
+base^{(shift+scale \times x)},\quad x>0
 \end{cases}
 $$
          
