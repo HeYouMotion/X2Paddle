@@ -26,13 +26,13 @@ paddle.fluid.layers.log(
 ```  
 
 ### 功能差异
-#### 计算机制的差异
+#### 计算机制
 
 Caffe：有三个关于计算的参数，其计算公式为：  
 $$
 y=\begin{cases}
 ln(shift+scale \times x),\quad base\leq 0 \\\\
-log_base(shift+scale \times x),\quad base>0
+log_{base}(shift+scale \times x),\quad base>0
 \end{cases}
 $$              
              
