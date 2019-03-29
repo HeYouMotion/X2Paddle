@@ -29,10 +29,10 @@ paddle.fluid.layers.crop(
 ```  
 
 ### 功能差异
-#### 裁剪参考输入的差异
+#### 输入格式
 Caffe：裁剪参考输入只能是Variable的格式。              
 PaddlePaddle：剪裁参考输入可以是Variable，也可以是一个list或者tuple，其中放入每一个维度的维度数。
-#### 裁剪偏移量输入的差异
+#### 偏移参数
 Caffe：只需要设置需要裁剪的维度的偏移量。             
 PaddlePaddle：每一个维度需要设置偏移量。
 ### 代码示例
