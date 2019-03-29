@@ -27,6 +27,6 @@ paddle.fluid.layers.power(
 ```  
 
 ### 功能差异
-#### 计算机制的差异
+#### 计算机制
 Caffe：有三个关于计算的参数，其计算公式为：$$y=(shift+scale \times x)^2$$            
-PaddlePaddle：只有一个关于计算的参数`factor`，其计算公式为：$$y=x^factor$$
+PaddlePaddle：只有一个关于计算的参数`factor`，其计算公式为：$$y=x^{factor}$$
