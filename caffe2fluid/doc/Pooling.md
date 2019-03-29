@@ -32,7 +32,7 @@ paddle.fluid.layers.pool2d(
 ```  
   
 ### 功能差异
-#### 计算输出高度和宽度的差异
+#### 计算输出高度和宽度
 计算池化的输出高度和宽度有两种方式，分别为向上取整（ceil）和向下取整（floor），其计算方式如下列所示：
 
 **向上取整：**  
@@ -44,11 +44,11 @@ paddle.fluid.layers.pool2d(
 	`W_out = (W_in-ksize[1]+2*padding[1]+strides[1]-1)/strides[1]+1`    
 
 Caffe：只能使用向上取整的方式来计算输入输出的大小。  
-PaddlePaddle：可以使用`ceil_mode`参数来定义使用何种计算方式，当`ceil_mode=False`（默认值）时使用向下取整的方式来计算，反之为`True`时则使用向上取整的方式进行计算。  
+PaddlePaddle：可以使用`ceil_mode`参数来定义使用何种计算方式，当`ceil_mode=False`（默认值）时使用向下取整的方式来计算，反之`ceil_mode=True`时则使用向上取整的方式进行计算。  
 
 
 
-#### 池化方式的差异
+#### 池化种类
 Caffe：提供了三种池化方式——最大池化、均值池化和随机池化（随机池化通过对像素点按照数值大小赋予概率，再按照概率进行亚采样）。  
 PaddlePaddle：提供了两种池化方式——最大池化和均值池化。
  
