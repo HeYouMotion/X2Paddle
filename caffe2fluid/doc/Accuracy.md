@@ -28,7 +28,7 @@ paddle.fluid.layers.accuracy(
 ```  
 
 ### 功能差异
-#### 计算机制的差异
+#### 计算机制
 Caffe：只能计算每个类别中top1中正确预测的个数。          
 PaddlePaddle：可以通过设置`k`来计算每个类别中top k 中正确预测的个数。
 
