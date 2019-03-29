@@ -45,4 +45,4 @@ PaddlePaddle：只能通过两个函数分别实现ReLU和Leaky ReLU。
 $$
 y=max(x,\alpha \times x)
 $$
-当alpha设置为0时，也可以直接使用Leaky ReLU带带Caffe中的ReLU层。
+当alpha设置为0时，也可以直接使用Leaky ReLU代替Caffe中的ReLU层。
