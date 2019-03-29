@@ -26,12 +26,12 @@ paddle.fluid.layers.exp(
 ```  
 
 ### 功能差异
-#### 计算机制的差异 
+#### 计算机制
 Caffe：有三个关于计算的参数，其计算公式为：  
 $$
 y=\begin{cases}
-e^(shift+scale \times x),\quad x\leq 0 \\\\
-base^(shift+scale \times x),\quad x>0
+e^\(shift+scale \times x\),\quad x\leq 0 \\\\
+base^\(shift+scale \times x\),\quad x>0
 \end{cases}
 $$
          
