@@ -33,7 +33,7 @@ paddle.fluid.layers.leaky_relu(
 
 
 ### 功能差异
-#### 实现的差异
+#### 实现
 Caffe：使用这个Layer即可分别实现ReLU和Leaky ReLU两个功能。     
 $$
 y=\begin{cases}
