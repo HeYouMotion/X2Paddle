@@ -40,7 +40,7 @@ paddle.fluid.layers.softmax_with_cross_entropy(
   
 
 Caffe：只可以使用硬标签的输入，同时进行预处理操作。                     
-PaddlePaddle：可以使用`soft_label`来设置是使用软标签（True）还是硬标签（False）。将`numeric_stable_mode`设为True，同时在GPU环境下运行，可以在使用硬标签之前先进行预处理。此外，软标签和硬标签的label输入略有不同，当log概率的输入大小为`N*K`时（`N`代表batch size，`K`代表类别数量），软标签的输入大小为`N*K`，其重的数值数据类型为`float`或者`double`，每一个batch中的值都是0或者1（1代表属于这个类别，0则代表不属于）；硬标签的输入大小为`N*1`，其重的数值数据类型为`int`，每一个batch中的值都是大于等于0且小于K（代表属于某一个类别）。
+PaddlePaddle：可以使用`soft_label`来设置是使用软标签（True）还是硬标签（False）。将`numeric_stable_mode`设为True，同时在GPU环境下运行，可以在使用硬标签之前先进行预处理。此外，软标签和硬标签的label输入略有不同，当log概率的输入大小为`N*K`时（`N`代表batch size，`K`代表类别数量），软标签的输入大小为`N*K`，其重的数值数据类型为`float`或者`double`，每一个batch中的值都是0或者1（1代表属于这个类别，0则代表不属于）；硬标签的输入大小为`N*1`，其中的数值数据类型为`int`，每一个batch中的值都是大于等于0且小于K（代表属于某一个类别）。
  
 #### 输出结果
 Caffe：输出是对所有样本的loss进行归一化后的结果。
