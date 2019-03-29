@@ -22,11 +22,10 @@ paddle.fluid.layers.square_error_cost(
 ```  
 
 ### 功能差异
-#### 计算机制的差异
-Caffe：计算的是整个输入的欧氏距离除以两倍的样本个数，最终获得的是一个值。                                        
+#### 实现方式
+Caffe：计算的是整个输入的欧氏距离除以两倍的样本个数，最终获得的标量输出。                                        
 
-
-PaddlePaddle：计算的是`input`和`label`中每个值对应的L2距离，输出的大小和输入大小一致。若要通过PaddlePaddle实现Caffe的这一操作可以通过下面示例完成：  
+PaddlePaddle：使用elemenwise方式，计算`input`和`label`对应元素的L2距离，输入和输出`shape`一致：  
 ```python
 inputs = paddle.fluid.layers.data(name = 'data1', shape = [2,3,227,227], append_batch_size = False, dtype = 'float32')
 labels = paddle.fluid.layers.data(name = 'data1', shape = [2,3,227,227], append_batch_size = False, dtype = 'float32')
