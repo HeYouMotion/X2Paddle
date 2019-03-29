@@ -68,7 +68,8 @@ paddle.fluid.ParamAttr(
     regularizer=None, 
     trainable=True, 
     gradient_clip=None, 
-    do_model_average=False)
+    do_model_average=False
+)
 ```
 #### 空洞卷积
 Caffe：无法使用空洞卷积。                  
