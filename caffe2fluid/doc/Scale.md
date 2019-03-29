@@ -38,7 +38,7 @@ paddle.fluid.layers.scale(
 ```  
 
 ### 功能差异
-#### 输入参数的差异
+#### 输入参数
 Caffe：设置了`filter`和`bias_filter`，它们在训练阶段被用来初始化，在测试阶段除非`bottom`只有一个输入否则他们的值都将被忽略，并由训练所获得的可能是多个维度的输入参数所代替。输入参数的维度由`axis`来定义，以大小为`100*3*40*60`的输入为例，其输入参数维度如下所示：  
 
 |   axis值    | 可能维度1 | 可能维度2 | 可能维度3 |  可能维度4  |
@@ -49,9 +49,9 @@ Caffe：设置了`filter`和`bias_filter`，它们在训练阶段被用来初始
 | axis==3==-1 |    $$60$$     |           |           |             |
 
   
-PaddlePaddle：不存在输入参数的，它的`scale`和`bias`在定义中设置了。  
+PaddlePaddle：不存在输入参数，它的`scale`和`bias`在定义中设置了。  
 
-#### 计算方式的差异
+#### 计算方式
 Caffe：只能在缩放之后添加bias。  
 PaddlePaddle：可以通过设置`bias_after_scale`设置是在缩放之后还是之前添加bias。
 
