@@ -30,7 +30,7 @@ paddle.fluid.layers.flatten(
 Caffe：有两个关于转换的参数，`axis`代表转换起始点，`end_axis`代表转换终止点。假设输入数据的维度为n，则`axis`和`end_axis`的取值范围都是[-n,n-1]（其中当i是一个大于等于-n的负值时，可以将其等同于i+n）。
 ```
 使用方法：
-1. 当0<axis<=end_axis时，代表将第axis+1维数据至第end_axis+1维数据压缩至同一纬度的数据.
+1. 当0<axis<=end_axis时，代表将第axis+1维数据至第end_axis+1维数据压缩至同一维度的数据.
 2. 当-n<=axis<=0且end_axis=axis+n-1时，代表在第`end_axis+1`个维度插入一个维度，且该维度大小为1，其余维度后移。
 ```
 PaddlePaddle：只有一个关于转换的参数`axis`,代表转换的分裂点。假设输入数据的维度为n，这`axis`的取值范围为[0,n]。
